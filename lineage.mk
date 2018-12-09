@@ -28,4 +28,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="vince-user 8.1.0 OPM1.171019.019 8.12.13 test-keys"
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := "xiaomi/vince/vince:8.1.0/OPM1.171019.019/8.12.13:user/test-keys"
+BUILD_FINGERPRINT := xiaomi/vince/vince:8.1.0/OPM1.171019.019/8.12.13:user/test-keys
