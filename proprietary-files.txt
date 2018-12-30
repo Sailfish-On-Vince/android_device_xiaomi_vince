@@ -65,22 +65,15 @@ vendor/lib64/soundfx/libqcreverb.so
 vendor/lib64/soundfx/libqcvirt.so
 vendor/lib64/soundfx/libshoebox.so
 
-# Audio ACDB - pin for hax
-vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb|f0bc6a73a0db4372d5bf1b06759eb5c19b47777b
-vendor/etc/acdbdata/QRD/QRD_General_cal.acdb|d2bdb61a06db632f2f15bda7a90334ae51624ded
-vendor/etc/acdbdata/QRD/QRD_Global_cal.acdb|82abc2611cbe77529752aa6a6d44c96f5f029e8f
-vendor/etc/acdbdata/QRD/QRD_Handset_cal.acdb|abd97bbc577db569cb974f7a55a17382e5d2ddde
-vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb|7e7d37c292a2b081eaa8b6c0ea88f3bb834a0cf4
-vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb|6a1a9c4f97269cbeec07fb314ee76035bbc57841
-vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb|1d100ce3b63f8d5a8e6ae9728a0cbb823689953e
-vendor/etc/acdbdata/adsp_avs_config.acdb|ac0616af3b2d4f070c0e54c18126a877e528621b
-
-# Audio - pin for hax
-vendor/lib/hw/audio.primary.msm8953.so|c9758084c22c7b082c3352d5543a3d11e166a937
-vendor/lib64/hw/audio.primary.msm8953.so|db36fabfc460d67231b4dcc79cf04da04a83982a
-vendor/lib/libtinyalsa.so|14e82cf7c89407de4ff1b6fde24aa6a9b9533c0e
-vendor/lib/libtinycompress.so|16c16c11c53be601b9f02f0e217faf9ff739bdd9
-vendor/lib/libtinyxml.so|c37f500d63590e0157363116ab5d4d0c3988cf16
+# Audio ACDB
+vendor/etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_General_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Global_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Handset_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb
+vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb
+vendor/etc/acdbdata/adsp_avs_config.acdb
 
 # Audio firmware - from vince
 etc/firmware/tas2557_uCDSP.bin:vendor/firmware/tas2557_uCDSP.bin
