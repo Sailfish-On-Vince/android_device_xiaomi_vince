@@ -40,6 +40,8 @@ TARGET_USES_64_BIT_BINDER := true
 # Kernel
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_hsl_uart,0x78af000 firmware_class.path=/vendor/firmware_mnt/image
+BOARD_KERNEL_CMDLINE += audit=0 selinux=0
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_PAGESIZE :=  2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
@@ -211,6 +213,10 @@ TARGET_RIL_VARIANT := caf
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/fstab.qcom
 
 # SELinux
+# We modify several neverallows, so let the build proceed
+#ifneq ($(TARGET_BUILD_VARIANT),user)
+#SELINUX_IGNORE_NEVERALLOWS := true
+#endif
 include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
@@ -218,9 +224,9 @@ BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 VENDOR_SECURITY_PATCH := 2018-12-05
 
 # Treble
-PRODUCT_VENDOR_MOVE_ENABLED := true
-BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
-PRODUCT_FULL_TREBLE_OVERRIDE := true
+#PRODUCT_VENDOR_MOVE_ENABLED := true
+#BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
+#PRODUCT_FULL_TREBLE_OVERRIDE := true
 
 # Wi-Fi
 BOARD_HAS_QCOM_WLAN := true
